@@ -1,0 +1,18 @@
+server:
+  port: 5000
+  shutdown: graceful
+
+spring:
+  application:
+    name: similar-products
+  main:
+    banner-mode: off
+
+# Every value can be overridden with an environment variable (relaxed binding),
+# e.g. SIMILAR_PRODUCTS_DETAIL_TIMEOUT=2s. Defaults live in SimilarProductsProperties.
+similar-products:
+  products-api-base-url: ${PRODUCTS_API_BASE_URL:http://localhost:3001}
+
+logging:
+  level:
+    root: INFO
